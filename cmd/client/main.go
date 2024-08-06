@@ -1,4 +1,4 @@
-package client
+package main
 
 import (
 	"context"
@@ -36,7 +36,7 @@ func (h *UserHandler) UserSignup(c *gin.Context) {
 
 func (h *UserHandler) ListUsers(c *gin.Context) {
 	req := pb.FetchAll{}
-	stream, err := h.grpcClient.ListUsers(context.Background(), req)
+	stream, err := h.grpcClient.ListUsers(context.Background(), &req)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return

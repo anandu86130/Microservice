@@ -20,7 +20,7 @@ func (s *Server) UserSignup(cxt context.Context, req *pb.UserCreate) (*pb.Respon
 }
 
 func (s *Server) ListUsers(req *pb.FetchAll, stream pb.UserService_ListUsersServer) error {
-	users := []*pb.UserDetails{
+	users := []*pb.UserList{
 		{Id: 1, Username: "Anandu", Email: "anandu86130@gmail.com"},
 		{Id: 2, Username: "Aswin", Email: "aswin@gmail.com"},
 	}

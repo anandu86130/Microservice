@@ -9,7 +9,7 @@ service UserService {
     rpc UserSignup(UserCreate) returns (Response);
 
     // Server Streaming RPC
-    rpc ListUsers(FetchAll) returns (stream UserDetails);
+    rpc ListUsers(FetchAll) returns (stream UserList);
 
     // Client Streaming RPC
     rpc UploadUsers(stream UserCreate) returns (Response);
@@ -35,7 +35,7 @@ message UserList{
     string role = 5;
 }
 
-message Respose{
+message Response{
     string status = 1;
     string error = 2;
     string message = 3;
