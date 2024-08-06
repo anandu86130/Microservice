@@ -6,7 +6,7 @@ option go_package = "./";
 
 message FetchAll {}
 
-message CreateUser{
+message UserCreate{
     string username = 1;
     string email = 2;
     string password = 3;
