@@ -6,7 +6,7 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/anandu86130/Microservice/cmd"
+	pb "github.com/anandu86130/Microservice/pb"
 	"google.golang.org/grpc"
 )
 
