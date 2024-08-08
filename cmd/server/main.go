@@ -65,7 +65,7 @@ func (s *Server) Chat(stream pb.UserService_ChatServer) error {
 		log.Printf("Received message: %v", req.Content)
 
 		// Send a response to the client
-		if err := stream.Send(&pb.MessageResponse{Reply: "Echo: " + req.Content}); err != nil {
+		if err := stream.Send(&pb.MessageResponse{Reply: "Hello"}); err != nil {
 			log.Printf("Error sending message: %v", err)
 			return err
 		}
